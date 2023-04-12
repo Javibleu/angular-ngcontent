@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { HighlightDirective } from './directives/highlight.directive';
 import { DisableButtonDirective } from './directives/disable-button.directive';
-import { CustomButtonComponent } from './custom-button/custom-button.component';
+import { CustomButtonComponent } from './directives/custom-button/custom-button.component';
 import { HoverHighlightDirective } from './directives/hoverhighlight.directive';
 import { EmailValidatorDirective } from './directives/email-validator.directive';
 import { CardComponent } from './ngcontent/card/card.component';

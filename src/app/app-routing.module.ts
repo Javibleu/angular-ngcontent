@@ -7,8 +7,8 @@ import { DirectivesComponent } from './directives/directives/directives.componen
 const routes: Routes = [
   {path: 'ngcontent', component: CardsComponent},
   {path: 'directives', component: DirectivesComponent},
-  {path: 'ngcontent', component: CardsComponent},
-  {path: 'ngcontent', component: CardsComponent},
+
+  {path: '**', component: CardsComponent},
 ];
 
 @NgModule({
