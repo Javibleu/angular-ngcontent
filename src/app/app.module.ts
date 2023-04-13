@@ -16,6 +16,7 @@ import { DirectivesComponent } from './directives/directives/directives.componen
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +28,7 @@ import { DirectivesComponent } from './directives/directives/directives.componen
     EmailValidatorDirective,
     CardComponent,
     CardsComponent,
-    DirectivesComponent
+    DirectivesComponent,
   ],
   imports: [
     BrowserModule,

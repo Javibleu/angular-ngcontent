@@ -1,15 +1,28 @@
-<div class="card" style="width: 18rem;" appHoverHighlight>
-    <div class="card-body">
-      <h5 class="card-title">
-        <ng-content select="[title]"></ng-content>
-      </h5>
-      <h6 class="card-subtitle mb-2 text-muted">
-        <ng-content select="[subtitle]"></ng-content>
-      </h6>
-      <p class="card-text" appHighlight="red">
-        <ng-content select="[content]"></ng-content>
-      </p>
-      <a href="#" class="card-link"><ng-content select="[link1]"></ng-content></a>
-      <a href="#" class="card-link"><ng-content select="[link2]"></ng-content></a>
-    </div>
+<!-- <div  appHoverHighlight>
+  <div class="card-body">
+    <h5 class="card-title">
+      <ng-content select="[title]"></ng-content>
+    </h5>
+    <h6 class="card-subtitle mb-2 text-muted">
+      <ng-content select="[subtitle]"></ng-content>
+    </h6>
+    <p class="card-text" appHighlight="red">
+      <ng-content select="[content]"></ng-content>
+    </p>
+    <a href="#" class="card-link"><ng-content select="[link1]"></ng-content></a>
+    <a href="#" class="card-link"><ng-content select="[link2]"></ng-content></a>
   </div>
+</div> -->
+
+<ng-container>
+
+  <!-- Content -->
+  <ng-content></ng-content>
+
+  <!-- Expansion -->
+  <div
+      class="fuse-card-expansion">
+      <ng-content select="[fuseCardExpansion]"></ng-content>
+  </div>
+
+</ng-container>
