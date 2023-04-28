@@ -12,6 +12,8 @@ import { EmailValidatorDirective } from './directives/email-validator.directive'
 import { CardComponent } from './ngcontent/card/card.component';
 import { CardsComponent } from './ngcontent/cards/cards.component';
 import { DirectivesComponent } from './directives/directives/directives.component';
+import { ViewChildComponent } from './view-child/view-child.component';
+
 
 
 
@@ -29,7 +31,7 @@ import { DirectivesComponent } from './directives/directives/directives.componen
     CardComponent,
     CardsComponent,
     DirectivesComponent,
-  ],
+    ViewChildComponent,  ],
   imports: [
     BrowserModule,
     AppRoutingModule
