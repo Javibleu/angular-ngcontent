@@ -14,6 +14,8 @@ import { CardsComponent } from './ngcontent/cards/cards.component';
 import { DirectivesComponent } from './directives/directives/directives.component';
 import { ViewChildComponent } from './view-child/view-child.component';
 import { InjectionDependencyComponent } from './ID/injection-dependency/injection-dependency.component';
+import { RaceService } from './ID/race.service';
+import { ApiService } from './ID/api.service';
 
 
 
@@ -33,12 +35,16 @@ import { InjectionDependencyComponent } from './ID/injection-dependency/injectio
     CardsComponent,
     DirectivesComponent,
     ViewChildComponent,
-    InjectionDependencyComponent,  ],
+    InjectionDependencyComponent,],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    { provide: RaceService, useClass: RaceService },
+    { provide: ApiService, useClass: ApiService },
+    { provide: ApiService, useClass: ApiService },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
