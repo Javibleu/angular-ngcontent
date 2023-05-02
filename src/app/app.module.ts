@@ -13,6 +13,7 @@ import { CardComponent } from './ngcontent/card/card.component';
 import { CardsComponent } from './ngcontent/cards/cards.component';
 import { DirectivesComponent } from './directives/directives/directives.component';
 import { ViewChildComponent } from './view-child/view-child.component';
+import { InjectionDependencyComponent } from './ID/injection-dependency/injection-dependency.component';
 
 
 
@@ -31,7 +32,8 @@ import { ViewChildComponent } from './view-child/view-child.component';
     CardComponent,
     CardsComponent,
     DirectivesComponent,
-    ViewChildComponent,  ],
+    ViewChildComponent,
+    InjectionDependencyComponent,  ],
   imports: [
     BrowserModule,
     AppRoutingModule
