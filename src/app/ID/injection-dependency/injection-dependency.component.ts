@@ -7,8 +7,8 @@ import { RaceService } from '../race.service';
   template: ` <h1>PonyRacer</h1>
               <p>{{list()}}</p>
               <div class="container flex">
-                <pre><code class="rounded-xl" [appHighlight]="code"></code></pre>
-                <pre><code class="rounded-xl" [appHighlight]="js"></code></pre>
+                <pre class="p-3"><code class="rounded-xl" [appHighlight]="code"></code></pre>
+                <pre class="p-3"><code class="rounded-xl" [appHighlight]="js"></code></pre>
               </div>
               `,
   styleUrls: ['./injection-dependency.component.css']
