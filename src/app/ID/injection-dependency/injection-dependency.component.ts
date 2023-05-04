@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { RaceService } from '../race.service';
-import { HighlightService } from 'src/app/highlight/highlight.service';
+
 
 @Component({
   selector: 'app-injection-dependency',
   template: ` <h1>PonyRacer</h1>
               <p>{{list()}}</p>
-              <div class="container">
-                <pre><code [appHighlight]="code"></code></pre>
+              <div class="container flex">
+                <pre><code class="rounded-xl" [appHighlight]="code"></code></pre>
+                <pre><code class="rounded-xl" [appHighlight]="js"></code></pre>
               </div>
               `,
   styleUrls: ['./injection-dependency.component.css']
@@ -30,6 +31,11 @@ export class InjectionDependencyComponent {
   </div>
 <p>{{list()}}</p>
 <a>link</a>`
+
+js: string = `var foo = 'foo';
+
+function list(){return raceService.list()}
+`
 
   constructor(private raceService: RaceService) { }
     

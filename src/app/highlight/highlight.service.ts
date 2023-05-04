@@ -1,30 +1,27 @@
 import { Injectable } from '@angular/core';
 
-import hljs from 'highlight.js'
+import hljs from 'highlight.js/lib/core'
 import xml from 'highlight.js/lib/languages/xml';
 import scss from 'highlight.js/lib/languages/scss';
 import typescript from 'highlight.js/lib/languages/typescript';
 
-@Injectable({
-  providedIn: 'root'
-})
 export class HighlightService {
 
+  languages = [
+    { name: 'typescript', func: typescript },
+    { name: 'scss', func: scss },
+    { name: 'xml', func: xml }
+  ]
+
   constructor() {
-
-    const languages = [
-      { name: 'typescript', func: typescript },
-      { name: 'scss', func: scss },
-      { name: 'xml', func: xml }
-    ]
-     languages.map((language) =>
-        this.registerLanguage(language.name, language.func)
-      );
-   }
+    this.registerLanguages();
+  }
 
 
-   registerLanguage(name: string, language: any) {
-    hljs.registerLanguage(name, language);
+  registerLanguages(){
+    this.languages.map((lang)=>{
+      hljs.registerLanguage(lang.name, lang.func);
+    })
   }
 
   listLanguages(): string[] {
@@ -34,9 +31,5 @@ export class HighlightService {
   highlightAuto(value: string, languageSubset: string[]) {
     return hljs.highlightAuto(value, languageSubset);
   }
-
-
-
-
 }
 
