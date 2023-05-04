@@ -7,12 +7,12 @@ import { ApiService } from './app/ID/api.service';
 
 
 platformBrowserDynamic().bootstrapModule(AppModule)
-  .then(appRef => interactWithInjector(appRef.injector))
+  // .then(appRef => interactWithInjector(appRef.injector))
   .catch(err => console.error(err));
 
 
-  function interactWithInjector(inj: Injector): void {
-    console.log(inj.get(RaceService));
-    console.log(inj.get(ApiService));
-
-    }
+function interactWithInjector(inj: Injector): void {
+  console.log(inj.get(RaceService));
+  console.log(inj.get(ApiService));
+  console.log(inj.get('IS_PROD'));
+}

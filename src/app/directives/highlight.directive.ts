@@ -3,7 +3,7 @@ import { Directive, HostBinding, Input } from '@angular/core';
 @Directive({
   selector: '[appHighlight]'
 })
-export class HighlightDirective {
+export class HighlightDirectiveOld {
   @Input('appHighlight') highlightColor!: string;
 
   @HostBinding('class')

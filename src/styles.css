@@ -8,3 +8,5 @@
 }
 @tailwind utilities;
 
+@import "~highlight.js/styles/vs2015.css"
+

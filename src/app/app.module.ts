@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
-import { HighlightDirective } from './directives/highlight.directive';
 import { DisableButtonDirective } from './directives/disable-button.directive';
 import { CustomButtonComponent } from './directives/custom-button/custom-button.component';
 import { HoverHighlightDirective } from './directives/hoverhighlight.directive';
@@ -16,6 +15,8 @@ import { ViewChildComponent } from './view-child/view-child.component';
 import { InjectionDependencyComponent } from './ID/injection-dependency/injection-dependency.component';
 import { RaceService } from './ID/race.service';
 import { ApiService } from './ID/api.service';
+import { HighlightModule } from './highlight/highlight.module';
+
 
 
 
@@ -26,7 +27,6 @@ import { ApiService } from './ID/api.service';
   declarations: [
     AppComponent,
     ToolbarComponent,
-    HighlightDirective,
     DisableButtonDirective,
     CustomButtonComponent,
     HoverHighlightDirective,
@@ -35,15 +35,18 @@ import { ApiService } from './ID/api.service';
     CardsComponent,
     DirectivesComponent,
     ViewChildComponent,
-    InjectionDependencyComponent,],
+    InjectionDependencyComponent,
+  ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HighlightModule
   ],
   providers: [
     { provide: RaceService, useClass: RaceService },
     { provide: ApiService, useClass: ApiService },
     { provide: ApiService, useClass: ApiService },
+    { provide: 'IS_PROD', useValue: true },
   ],
   bootstrap: [AppComponent]
 })
