@@ -1,0 +1,29 @@
+<h1>Animations</h1>
+
+<input type="checkbox"
+       id="animation-toggle"
+       [checked]="!animationsDisabled"
+       (click)="toggleAnimations()">
+<label for="animation-toggle">Toggle All Animations</label>
+
+<nav class="my-2">
+  <a  class="link" routerLink="animations/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
+  <a class="link" routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About</a>
+  <a class="link" routerLink="open-close" routerLinkActive="active" ariaCurrentWhenActive="page">Open/Close</a>
+  <a class="link" routerLink="/status" routerLinkActive="active" ariaCurrentWhenActive="page">Status Slider</a>
+  <a class="link" routerLink="/toggle" routerLinkActive="active" ariaCurrentWhenActive="page">Toggle Animations</a>
+  <a class="link" routerLink="/enter-leave" routerLinkActive="active" ariaCurrentWhenActive="page">Enter/Leave</a>
+  <a class="link" routerLink="/auto" routerLinkActive="active" ariaCurrentWhenActive="page">Auto Calculation</a>
+  <a class="link" routerLink="/heroes" routerLinkActive="active" ariaCurrentWhenActive="page">Filter/Stagger</a>
+  <a class="link" routerLink="/hero-groups" routerLinkActive="active" ariaCurrentWhenActive="page">Hero Groups</a>
+  <a class="link" routerLink="/insert-remove" routerLinkActive="active" ariaCurrentWhenActive="page">Insert/Remove</a>
+  <a class="link" routerLink="/querying" routerLinkActive="active" ariaCurrentWhenActive="page">Querying</a>
+</nav>
+
+
+<router-outlet></router-outlet>
+
+
+
+
+    

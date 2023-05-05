@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,9 +21,6 @@ import { HighlightModule } from './highlight/highlight.module';
 
 
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,11 +34,14 @@ import { HighlightModule } from './highlight/highlight.module';
     DirectivesComponent,
     ViewChildComponent,
     InjectionDependencyComponent,
+
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    HighlightModule
+    HighlightModule,
+
   ],
   providers: [
     { provide: RaceService, useClass: RaceService },
