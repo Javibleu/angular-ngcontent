@@ -1,0 +1,11 @@
+<section>
+    <h2>Status Slider</h2>
+
+    <nav>
+        <button class="link" (click)="toggle()">Toggle Status</button>
+    </nav>
+
+    <div [@slideStatus]="status" class="w-48 h-48 rounded-3xl text-white text-center">
+        {{ status == 'active' ? 'Active' : 'Inactive' }}
+    </div>
+</section>
