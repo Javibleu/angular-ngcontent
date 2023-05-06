@@ -19,8 +19,6 @@ import { ApiService } from './ID/api.service';
 import { HighlightModule } from './highlight/highlight.module';
 
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +32,6 @@ import { HighlightModule } from './highlight/highlight.module';
     DirectivesComponent,
     ViewChildComponent,
     InjectionDependencyComponent,
-
   ],
   imports: [
     BrowserModule,

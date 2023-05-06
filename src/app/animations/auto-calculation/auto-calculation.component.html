@@ -1,0 +1,14 @@
+<section>
+    <h2>Automatic Calculation</h2>
+
+    <ul class="heroes" [@stagger]>
+        <li *ngFor="let hero of heroes"
+            [@shrinkOut]="'in'">
+            <button class="inner" type="button" (click)="removeHero(hero.id)">
+              <span class="badge">{{ hero.id }}</span>
+              <span class="name">{{ hero.name }}</span>
+            </button>
+        </li>
+      </ul>
+
+</section>

@@ -5,13 +5,26 @@ import { AnimationsRoutingModule } from './animations-routing.module';
 import { OpenCloseComponent } from './open-close/open-close.component';
 import { HomeComponent } from './home/home.component';
 import { StatusSliderComponent } from './status-slider/status-slider.component';
+import { EnterLeaveComponent } from './enter-leave/enter-leave.component';
+import { AutoCalculationComponent } from './auto-calculation/auto-calculation.component';
+import { FilterComponent } from './filter/filter.component';
+import { InsertRemoveComponent } from './insert-remove/insert-remove.component';
+import { QueryingComponent } from './querying/querying.component';
+import { GroupComponent } from './group/group.component';
+
 
 @NgModule({
   declarations: [
     AnimationsComponent,
-    OpenCloseComponent,
+    AutoCalculationComponent,
+    EnterLeaveComponent,
+    FilterComponent,
     HomeComponent,
-    StatusSliderComponent
+    InsertRemoveComponent,
+    OpenCloseComponent,
+    QueryingComponent,
+    StatusSliderComponent,
+    GroupComponent
   ],
   imports: [
     CommonModule,

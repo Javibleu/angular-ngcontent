@@ -1,15 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
 @tailwind base;
+@layer base{
+    h2{
+        @apply text-slate-500 text-xl
+    }
+}
 @tailwind components;
 @layer components{
     .anchor{
         @apply text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium transition-colors
     }
     .link{
-        @apply bg-pink-600 text-white py-1 px-2 m-1 rounded
+        @apply bg-pink-600 text-white py-1 px-2 m-1 rounded               
     }
+    
+    .heroes{
+        @apply mt-4 p-0 w-60
+    }
+    .heroes>li{
+        @apply flex items-center w-full overflow-hidden
+    }
+    .heroes .inner{
+        @apply flex flex-1 bg-slate-500 m-2 p-0 rounded items-stretch
+    }
+    .heroes .badge{
+        @apply inline-block text-white p-2 bg-blue-500 rounded
+    }
+    .heroes .name{
+        @apply w-max py-2 px-2 text-slate-200
+    }
+
+
 }
 @tailwind utilities;
+
+
+
 
 /* @import "~highlight.js/styles/vs2015.css" */
 
