@@ -8,7 +8,6 @@ import { EnterLeaveComponent } from "./enter-leave/enter-leave.component";
 import { AutoCalculationComponent } from "./auto-calculation/auto-calculation.component";
 import { FilterComponent } from "./filter/filter.component";
 import { GroupComponent } from "./group/group.component";
-import { InsertRemoveComponent } from "./insert-remove/insert-remove.component";
 import { QueryingComponent } from "./querying/querying.component";
 
 
@@ -23,7 +22,6 @@ const routes: Routes = [
       { path: 'auto', component: AutoCalculationComponent },
       { path: 'heroes', component: FilterComponent },
       { path: 'hero-groups', component: GroupComponent },
-      { path: 'insert-remove', component: InsertRemoveComponent },
       { path: 'querying', component: QueryingComponent },
     ]
   },
