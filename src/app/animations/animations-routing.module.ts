@@ -15,6 +15,7 @@ const routes: Routes = [
   {
     path: '', component: AnimationsComponent,
     children: [
+      { path: '', pathMatch: 'full', redirectTo: 'home'},
       { path: 'home', component: HomeComponent },
       { path: 'open-close', component: OpenCloseComponent },
       { path: 'status', component: StatusSliderComponent },
