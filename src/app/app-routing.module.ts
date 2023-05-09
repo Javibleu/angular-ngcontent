@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { CardsComponent } from './ngcontent/cards/cards.component';
 import { DirectivesComponent } from './directives/directives/directives.component';
 import { InjectionDependencyComponent } from './ID/injection-dependency/injection-dependency.component';
-import { NgTemplateOutletComponent } from './ngTemplateOutlet/ng-template-outlet/ng-template-outlet.component';
 
 
 

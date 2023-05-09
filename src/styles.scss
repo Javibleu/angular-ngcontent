@@ -5,8 +5,8 @@
         @apply text-slate-500 text-xl
     }
     body{
-        @apply dark:bg-gray-900
-    }
+        @apply bg-slate-100 
+        }
 }
 @tailwind components;
 @layer components{
