@@ -7,17 +7,19 @@ interface ProgressContext {
 @Component({
   selector: 'app-progress-bar',
   template: `
-            <div class="w-80 text-xs text-center bg-gray-200 rounded-sm h-4.5 dark:bg-gray-700 dark:text-white">
+            <div class="w-80 text-xs text-center bg-gray-700 rounded-sm h-5">
               <div
-              class="bg-blue-600 h-4.5 rounded-sm"
+              class="bg-blue-600 h-5 rounded-sm"
               role="progress-bar"
               [style.width.%]="percentage"
               [attr.aria-valuenow]= "value"
               [attr.aria-valuemin]= "min"
               [attr.aria-valuemax]= "max"
               >
+            </div>
+            <div class="relative -top-5 text-white">
               <ng-container [ngTemplateOutlet]="formatter || noFormatter"
-                [ngTemplateOutletContext]="{$implicit: percentage}"></ng-container>
+              [ngTemplateOutletContext]="{$implicit: percentage}"></ng-container>
               <ng-template #noFormatter>{{percentage | number }}% </ng-template>
             </div>
           </div>
