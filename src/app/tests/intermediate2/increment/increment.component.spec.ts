@@ -38,13 +38,37 @@ describe('Incremendator Component', () => {
 
         fixture.detectChanges();
 
+        const elem: HTMLInputElement = fixture.debugElement.query(By.css('input')).nativeElement;
         fixture.whenStable().then( ()=>{
             
-            const elem: HTMLInputElement = fixture.debugElement.query(By.css('input')).nativeElement;
-            
+
             expect(elem.value).toBe('55');
 
         })
+    });
+
+    it('should increment/decrement on click event', ()=>{
+
+        const buttons = fixture.debugElement.queryAll(By.css('.btn-primary'));
+
+        buttons[0].triggerEventHandler('click', null) // push decrement, was 50
+        expect( component.progreso).toBe(45)
+
+        buttons[1].triggerEventHandler('click', null) // push increment, was 45
+        expect( component.progreso).toBe(50)
+
+    });
+
+    it('should update value on input after increment click()', async()=>{
+
+        const button = fixture.debugElement.query(By.css('button'));
+        const element:HTMLElement = fixture.debugElement.query(By.css('h3')).nativeElement;
+        
+        button.triggerEventHandler('click', null)
+        fixture.detectChanges();
+
+        expect(element.innerHTML).toContain('45');
+
     });
 
 });
