@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GroupComponent } from './group.component';
+import { HospitalComponent } from './hospital.component';
 
-xdescribe('GroupComponent', () => {
-  let component: GroupComponent;
-  let fixture: ComponentFixture<GroupComponent>;
+describe('HospitalComponent', () => {
+  let component: HospitalComponent;
+  let fixture: ComponentFixture<HospitalComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GroupComponent ]
+      declarations: [ HospitalComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(GroupComponent);
+    fixture = TestBed.createComponent(HospitalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

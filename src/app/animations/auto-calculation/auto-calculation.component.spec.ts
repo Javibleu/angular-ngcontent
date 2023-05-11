@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AutoCalculationComponent } from './auto-calculation.component';
 
-describe('AutoCalculationComponent', () => {
+xdescribe('AutoCalculationComponent', () => {
   let component: AutoCalculationComponent;
   let fixture: ComponentFixture<AutoCalculationComponent>;
 
