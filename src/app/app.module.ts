@@ -18,7 +18,6 @@ import { RaceService } from './ID/race.service';
 import { ApiService } from './ID/api.service';
 import { HighlightModule } from './highlight/highlight.module';
 import { TestsModule } from './tests/tests.module';
-import { DoctorService } from './tests/intermediate2/doctor/doctor.service';
 import { HttpClientModule } from '@angular/common/http';
 
 
