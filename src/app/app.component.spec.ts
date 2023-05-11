@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core'
 
 describe('AppComponent', () => {
   
@@ -17,6 +18,7 @@ describe('AppComponent', () => {
         AppComponent,
         ToolbarComponent
       ],
+      schemas: [ NO_ERRORS_SCHEMA ]
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);
@@ -28,7 +30,12 @@ describe('AppComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  fit('should have a <router-outlet></router-outlet>', () => {
+  it('should have a <router-outlet></router-outlet>', () => {
+    const elem: HTMLElement = fixture.nativeElement.querySelector('router-outlet')
+    expect(elem).toBeTruthy();
+  });
+
+  it('should have a link to a page', () => {
     const elem: HTMLElement = fixture.nativeElement.querySelector('router-outlet')
     expect(elem).toBeTruthy();
   });
