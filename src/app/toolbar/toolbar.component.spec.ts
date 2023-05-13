@@ -5,7 +5,7 @@ import { By } from '@angular/platform-browser';
 import { RouterLinkWithHref } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 
-fdescribe('ToolbarComponent', () => {
+describe('ToolbarComponent', () => {
   let component: ToolbarComponent;
   let fixture: ComponentFixture<ToolbarComponent>;
 
